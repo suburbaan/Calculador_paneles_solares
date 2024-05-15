@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Calculadora de Paneles Solares</title>
+</head>
+<body>
+    <h1>Calculadora de Paneles Solares en Techos</h1>
+    <form action="{{ url_for('calcular') }}" method="post">
+        <table>
+            <h3>Veamos la dimensión del techo</h3>
+            <tr>
+                <td><label>horizontal</label></td>
+                <td><label>vertical</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="horizontal" name="nx" required max="999"></td>
+                <td><input type="number" id="vertical" name="ny" required max="999"></td>
+            </tr>
+        </table>
+        <table>
+            <h3>Ahora veamos los paneles a utilizar</h3>
+            <h6>Favor ingresar en a y b los valores de la dimension de los paneles, una vez finalizado seleccione continuar para obtener la respuesta.</h6>
+            <tr>
+                <td><label>A</label></td>
+                <td><label>B</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="horizontalp" name="na" required max="99"></td>
+                <td><input type="number" id="verticalp" name="nb" required max="99"></td>
+            </tr>
+        </table>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>
